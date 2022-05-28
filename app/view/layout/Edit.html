@@ -1,0 +1,58 @@
+<style>
+  .bg-glass {
+      float: left;
+      margin-top: 180px;
+      display: block;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      left: 50%;
+      top: 50%;
+      background: rgba(255, 255, 255, 0.795);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: solid transparent;
+    }
+</style>
+<div class="container mt-5 mb-5">
+  <div class="row row-cols-auto justify-content-center g-5">
+      <div class="form-group">
+        <div class="bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form method="post" action="index.php?pg=edit&act=update">
+              {{upContent}}
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="proname" class="form-control" value="{{proname}}" required/>
+                <label class="form-label" for="name">Product Name</label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="proprice" class="form-control" placeholder="$" value="{{proprice}}" required/>
+                <label class="form-label" for="lastname">Price</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                  <input type="file" id="image" class="form-control">
+                  <label class="form-label" for="lastname">Image</label>
+                </div>
+
+                <div class="form-outline mb-4 ">
+                  <textarea name="description" id="desc" cols="30" rows="4" class="form-control" >{{prodesc}}</textarea>
+                  <label class="form-label" for="lastname">Description</label>
+                </div>
+              <div class='justify-content-center mb-4'>
+                  <button type="submit" class="btn btn-primary btn-block">
+                  Update
+                  </button>
+                  </div>
+                <div class='justify-content-center mb-4'>
+                    <a href="index.php?pg=pmanager" class="btn btn-primary btn-block">
+                      Back
+                    </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+  </div>
+</div>
